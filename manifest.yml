@@ -10,4 +10,4 @@ applications:
     - oms-eureka
     - oms-mongo
     - oms-circuitbreaker
-    - oms-redis
+    - oms-rabbit

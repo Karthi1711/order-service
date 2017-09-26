@@ -1,11 +1,13 @@
 ---
 applications:
-- name: event-service
+- name: order-service
   instance: 1
-  host: event-service
-  path: build\libs\event-service-0.0.1-SNAPSHOT.jar
+  host: order-service
+  path: build\libs\order-service-0.0.1-SNAPSHOT.jar
   buildpack: https://github.com/cloudfoundry/java-buildpack.git
   memory: 1024M
   services:
     - oms-eureka
     - oms-mongo
+    - oms-circuitbreaker
+    - oms-redis
